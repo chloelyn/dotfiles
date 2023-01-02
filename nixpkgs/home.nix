@@ -7,134 +7,17 @@
   home.homeDirectory = "/Users/aly";
   xdg.dataHome = "${config.home.homeDirectory}/.local/share";
 
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    # Shell
-    oh-my-zsh
-    neofetch
+  # Modularized configuration files
+  imports = [
+    ./programs/zsh.nix
+    ./programs/bash.nix
+    ./programs/git.nix
+    ./programs/ssh.nix
+    ./programs/helix.nix
 
-    # Tools
-    bat
-    exa
-    fd
-    du-dust
-    ripgrep
-    helix
-
-    # Git
-    gh
-    git
-
-    # Language support
-    nodejs-18_x # Node
-    python310 # Python
-    rustup # Rust
-    jdk17 # Java
-
-    # Node extras
-    nodePackages.pnpm
-    nodePackages.prettier
-    nodePackages.typescript
+    ./packages.nix
+    ./session.nix
   ];
-
-  home.sessionPath = [
-    "/usr/local/bin"
-    "${config.home.homeDirectory}/Library/pnpm"
-    "${config.home.homeDirectory}/.cargo/bin"
-  ];
-
-  home.sessionVariables = {
-    NIX_PATH =
-      "${config.home.homeDirectory}/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
-    EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/hx";
-    ZSH_COMPDUMP = "${config.xdg.dataHome}/zsh/zcompdump";
-    WAKATIME_HOME = "${config.home.homeDirectory}/.config/wakatime";
-    PNPM_HOME = "${config.home.homeDirectory}/Library/pnpm";
-  };
-
-  # Git configuration
-  programs.git = {
-    enable = true;
-    userName = "Alaina Newmark";
-    userEmail = "68250402+chloelyn@users.noreply.github.com";
-    signing = {
-      key = "37BA3AE5";
-      signByDefault = true;
-      gpgPath = "/usr/local/bin/gpg";
-    };
-    ignores = [ ".DS_Store" ];
-  };
-
-  # SSH configuration
-  programs.ssh = {
-    enable = true;
-    matchBlocks = {
-      "github.com" = {
-        extraOptions = {
-          UseKeychain = "yes";
-          AddKeysToAgent = "yes";
-        };
-        identityFile = "${config.xdg.dataHome}/ssh/id_ed25519";
-      };
-    };
-  };
-
-  # Zsh configuration
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-    enableSyntaxHighlighting = true;
-    initExtra = ''
-      # Configure Nix
-      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-      fi
-    '';
-
-    profileExtra = ''
-      SHELL_SESSIONS_DISABLE=1
-    '';
-
-    shellAliases = {
-      # https://github.com/ibraheemdev/modern-unix
-      cat = "bat";
-      ls = "exa";
-      du = "dust";
-
-      # Home-manager
-      hms = "home-manager switch";
-      hme = "nix-shell ~/.config/nixpkgs/shell.nix";
-
-      # Nix
-      ncd = "nix-collect-garbage -d";
-
-      # Tailscale
-      tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
-
-      # Misc
-      dev = "cd ~/Documents/personal/projects.nosync";
-      digi = "cd ~/Documents/school/11th/digi";
-      ip = "dig -4 TXT +short o-o.myaddr.l.gooole.com @ns1.google.com";
-      path = ''python3 -c "import os; path: str = os.popen (\"echo $PATH\").read().strip(); print('\n'.join(path.split(':')));" '';
-    };
-
-    history = { path = "${config.xdg.dataHome}/zsh/zsh_history"; };
-
-    oh-my-zsh = {
-      enable = true;
-      theme = "norm";
-
-      plugins = [ "git" ];
-    };
-  };
-
-  # Bash configuration
-  programs.bash = {
-    enable = true;
-    enableCompletion = false;
-    shellOptions = [ ];
-    historyFile = "${config.xdg.dataHome}/bash/bash_history";
-  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
