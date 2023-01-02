@@ -26,6 +26,7 @@
     python310
     rustup
     jdk17
+    haskell.compiler.ghc943
 
     # Node extras
     nodePackages.pnpm
@@ -36,11 +37,6 @@
     black
 
     # Wrappers
-    (runCommandNoCC "helix-wrapped" { nativeBuildInputs = [ makeWrapper ]; } ''
-      mkdir -p $out/bin
-      makeWrapper ${helix}/bin/hx $out/bin/helix-wrapped \
-        --prefix PATH : ${lib.makeBinPath [ rust-analyzer rnix-lsp python39Packages.python-lsp-server ]}
-    ''
-    )
+    (callPackage ./wrappers/helix.nix { })
   ];
 }
