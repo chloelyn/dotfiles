@@ -7,14 +7,44 @@
   home.homeDirectory = "/Users/aly";
   xdg.dataHome = "${config.home.homeDirectory}/.local/share";
 
+  # Packages to install to the user profile
+  home.packages = with pkgs; [
+    # Shell
+    starship
+    direnv
+
+    # Tools
+    bat
+
+    # Git
+    gh
+    git
+
+    # Language support
+    nodejs-18_x
+    python310
+    rustup
+    jdk17
+    haskell.compiler.ghc924
+
+    # Node extras
+    nodePackages.pnpm
+    nodePackages.prettier
+    nodePackages.typescript
+
+    # Python extras
+    black
+
+    # Wrappers
+    (callPackage ./wrappers/helix.nix { })
+  ];
+
   # Modularized configuration files
   imports = [
     ./programs/zsh.nix
     ./programs/bash.nix
-
     ./programs/starship.nix
     ./programs/direnv.nix
-
     ./programs/git.nix
     ./programs/ssh.nix
     ./programs/helix.nix
@@ -22,15 +52,8 @@
 
     ./dedicated/default.nix
 
-    ./packages.nix
     ./session.nix
   ];
-
-  # Nix
-  nix.package = pkgs.nix;
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
