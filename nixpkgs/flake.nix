@@ -14,7 +14,8 @@
     let
       system = "x86_64-darwin";
       pkgs = nixpkgs.legacyPackages.${system};
-    in {
+    in
+    {
       homeConfigurations.aly = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
