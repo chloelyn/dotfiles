@@ -129,8 +129,6 @@
 
       # Tailscale
       tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
-      exu = "cd ${config.home.homeDirectory}/.tailscale && railway up";
-      exd = "cd ${config.home.homeDirectory}/.tailscale && railway down";
 
       # Misc
       dev = "cd ~/Documents/personal/projects.nosync";
