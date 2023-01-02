@@ -24,6 +24,7 @@
 
     # Cloud CLIs
     railway
+    flyctl
 
     nodePackages.pnpm # Package manager for JS/TS
 
