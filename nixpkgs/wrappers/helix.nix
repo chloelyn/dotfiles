@@ -5,7 +5,7 @@
 , makeWrapper
 , helix
 , rust-analyzer
-, rnix-lsp
+, nil
 , nixpkgs-fmt
 , python39Packages
 , haskell-language-server
@@ -26,7 +26,7 @@ runCommandNoCC "helix-wrapped"
   makeWrapper ${helix}/bin/hx $out/bin/helix-wrapped \
     --prefix PATH : ${lib.makeBinPath [
       rust-analyzer
-      rnix-lsp
+      nil
       python39Packages.python-lsp-server
       hls
       haskellPackages.hindent

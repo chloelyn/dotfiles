@@ -26,6 +26,9 @@
         formatter = {
           command = "nixpkgs-fmt";
         };
+        language-server = {
+          command = "nil";
+        };
       }
       {
         auto-format = true;
