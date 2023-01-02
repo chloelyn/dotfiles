@@ -6,6 +6,7 @@
 , helix
 , rust-analyzer
 , rnix-lsp
+, nixpkgs-fmt
 , python39Packages
 , haskell-language-server
 , haskellPackages
@@ -29,5 +30,6 @@ runCommandNoCC "helix-wrapped"
       python39Packages.python-lsp-server
       hls
       haskellPackages.hindent
+      nixpkgs-fmt
   ]}
 ''

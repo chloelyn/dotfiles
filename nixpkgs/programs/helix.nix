@@ -22,6 +22,13 @@
     languages = [
       {
         auto-format = true;
+        name = "nix";
+        formatter = {
+          command = "nixpkgs-fmt";
+        };
+      }
+      {
+        auto-format = true;
         name = "python";
         formatter = {
           command = "black";
