@@ -28,6 +28,7 @@
     doppler
 
     nodePackages.pnpm # Package manager for JS/TS
+    nodePackages.prettier # Formatter
 
     # Git
     gh
