@@ -30,7 +30,7 @@
       hme = "cd ~/.config/nixpkgs && hx home.nix";
 
       # Wrapped helix
-      hx = "helix";
+      hx = "helix-wrapped";
 
       # Nix
       ncd = "nix-collect-garbage -d";
