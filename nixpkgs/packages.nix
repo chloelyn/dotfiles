@@ -14,6 +14,7 @@
     ripgrep
     neofetch
     helix
+    direnv
 
     # Git
     gh
