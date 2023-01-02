@@ -8,6 +8,7 @@
 , nil
 , nixpkgs-fmt
 , python39Packages
+, black
 , ...
 }:
 
@@ -21,6 +22,7 @@ runCommandNoCC "helix-wrapped"
       rust-analyzer
       nil
       python39Packages.python-lsp-server
+      black
       nixpkgs-fmt
   ]}
 ''

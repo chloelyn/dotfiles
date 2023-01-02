@@ -20,7 +20,6 @@ in
     gh
     git
     rust-stable
-    black
 
     (callPackage ./wrappers/helix.nix { })
   ];
