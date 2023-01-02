@@ -2,6 +2,7 @@
 helix
 git
 bat
+btop
 nix
 *.toml
 

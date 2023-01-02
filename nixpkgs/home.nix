@@ -19,6 +19,7 @@
     ./programs/ssh.nix
     ./programs/helix.nix
     ./programs/bat.nix
+    ./programs/dedicated/default.nix
 
     ./packages.nix
     ./session.nix
