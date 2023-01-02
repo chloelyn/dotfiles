@@ -50,7 +50,7 @@
     ./programs/helix.nix
     ./programs/bat.nix
 
-    ./dedicated/default.nix
+    ./dedicated
 
     ./session.nix
   ];
