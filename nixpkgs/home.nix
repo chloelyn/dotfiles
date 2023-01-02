@@ -14,6 +14,7 @@
     ./programs/git.nix
     ./programs/ssh.nix
     ./programs/helix.nix
+    ./programs/bat.nix
 
     ./packages.nix
     ./session.nix
