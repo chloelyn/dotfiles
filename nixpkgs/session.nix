@@ -17,6 +17,5 @@
     RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
     CARGO_HOME = "${config.xdg.dataHome}/cargo";
     LESSHISTFILE = "-";
-    BAT_THEME="Catppuccin-mocha";
   };
 }

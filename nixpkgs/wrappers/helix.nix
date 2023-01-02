@@ -8,6 +8,7 @@
 , rnix-lsp
 , python39Packages
 , haskell-language-server
+, haskellPackages
 , ...
 }:
 
@@ -27,5 +28,6 @@ runCommandNoCC "helix-wrapped"
       rnix-lsp
       python39Packages.python-lsp-server
       hls
+      haskellPackages.hindent
   ]}
 ''

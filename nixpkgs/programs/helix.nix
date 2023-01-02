@@ -28,6 +28,13 @@
           args = [ "--quiet" "-" ];
         };
       }
+      {
+        auto-format = true;
+        name = "haskell";
+        formatter = {
+          command = "hindent";
+        };
+      }
     ];
     themes = {
       catppuccin_mocha =
