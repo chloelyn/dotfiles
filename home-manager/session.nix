@@ -3,7 +3,6 @@
 {
   home.sessionPath = [
     "/usr/local/bin"
-    "${config.home.homeDirectory}/Library/pnpm"
     "${config.xdg.dataHome}/cargo/bin"
   ];
 
@@ -13,7 +12,6 @@
     EDITOR = "/etc/profiles/per-user/aly/bin/helix-wrapped";
     ZSH_COMPDUMP = "${config.xdg.dataHome}/zsh/zcompdump";
     WAKATIME_HOME = "${config.home.homeDirectory}/.config/wakatime";
-    PNPM_HOME = "${config.home.homeDirectory}/Library/pnpm";
     CARGO_HOME = "${config.xdg.dataHome}/cargo";
     LESSHISTFILE = "-";
   };
