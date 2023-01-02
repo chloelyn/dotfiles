@@ -8,7 +8,7 @@
 // from the command palette or from `Zed` application menu.
 {
     "tab_size": 4,
-    "hard_tabs": true,
+    "hard_tabs": false,
     "theme": "Rosé Pine",
     "vim_mode": false,
     "buffer_font_size": 15,

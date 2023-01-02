@@ -12,6 +12,7 @@
     fd
     du-dust
     ripgrep
+    btop
     neofetch
     helix
     direnv
