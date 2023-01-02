@@ -19,10 +19,7 @@
     fd
     du-dust
     ripgrep
-    neovim
-
-    # Package managers
-    nodePackages.pnpm # Node
+    helix
 
     # Git
     gh
@@ -30,27 +27,18 @@
 
     # Language support
     nodejs-18_x # Node
-    nodePackages.typescript # TypeScript
     python310 # Python
     rustup # Rust
     jdk17 # Java
 
-    # Language servers
-    # cmake-language-server # CMakeLists.txt (broken)
-    nodePackages.dockerfile-language-server-nodejs # Dockerfile
-    sumneko-lua-language-server # Lua
-    nodePackages.vscode-langservers-extracted # HTML, CSS, Eslint, JSON, Markdown
-    nodePackages.typescript-language-server # TypeScript
-    rnix-lsp # Nix
-    pyright # Python
-    rust-analyzer # Rust
-
-    # Formatters
-    stylua # Lua
-    nodePackages.prettier # Node
+    # Node extras
+    nodePackages.pnpm
+    nodePackages.prettier
+    nodePackages.typescript
   ];
 
   home.sessionPath = [
+    "/usr/local/bin"
     "${config.home.homeDirectory}/Library/pnpm"
     "${config.home.homeDirectory}/.cargo/bin"
   ];
@@ -58,7 +46,7 @@
   home.sessionVariables = {
     NIX_PATH =
       "${config.home.homeDirectory}/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
-    EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/nvim";
+    EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/hx";
     ZSH_COMPDUMP = "${config.xdg.dataHome}/zsh/zcompdump";
     WAKATIME_HOME = "${config.home.homeDirectory}/.config/wakatime";
     PNPM_HOME = "${config.home.homeDirectory}/Library/pnpm";
@@ -112,11 +100,6 @@
       cat = "bat";
       ls = "exa";
       du = "dust";
-
-      # Neovim
-      vim = "nvim";
-      nv = "nvim";
-      nvd = "neovide";
 
       # Home-manager
       hms = "home-manager switch";
