@@ -74,7 +74,7 @@
   programs.git = {
     enable = true;
     userName = "Chloe Newmark";
-    userEmail = "68250402+chloeashlyn@users.noreply.github.com";
+    userEmail = "68250402+chloelyn@users.noreply.github.com";
     signing = {
       key = "37BA3AE5";
       signByDefault = true;
