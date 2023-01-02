@@ -11,6 +11,10 @@
   imports = [
     ./programs/zsh.nix
     ./programs/bash.nix
+
+    ./programs/starship.nix
+    ./programs/direnv.nix
+
     ./programs/git.nix
     ./programs/ssh.nix
     ./programs/helix.nix

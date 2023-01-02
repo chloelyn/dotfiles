@@ -4,7 +4,8 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # Shell
-    oh-my-zsh
+    starship
+    direnv
 
     # Tools
     bat
@@ -15,7 +16,6 @@
     tldr
     btop
     neofetch
-    direnv
 
     # Git
     gh
