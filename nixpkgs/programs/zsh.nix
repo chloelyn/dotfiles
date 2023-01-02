@@ -27,7 +27,7 @@
 
       # Home-manager
       hms = "home-manager switch";
-      hme = "cd ~/.config/nixpkgs && nix-shell shell.nix";
+      hme = "cd ~/.config/nixpkgs && hx home.nix";
 
       # Nix
       ncd = "nix-collect-garbage -d";

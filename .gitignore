@@ -2,6 +2,9 @@
 helix
 git
 
+# direnv
+.envrc
+
 # Other
 wakatime
 iterm2
