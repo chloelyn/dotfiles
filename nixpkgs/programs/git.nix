@@ -10,5 +10,10 @@
       gpgPath = "/usr/local/bin/gpg";
     };
     ignores = [ ".DS_Store" ];
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+    };
   };
 }
