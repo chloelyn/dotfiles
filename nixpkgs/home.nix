@@ -27,7 +27,6 @@
     doppler
 
     nodePackages.pnpm # Package manager for JS/TS
-    nodePackages.prettier # Formatter
 
     # Git
     gh
@@ -51,10 +50,8 @@
     rust-analyzer # Rust
 
     # Formatters
-    stylua
-
-    # Circuits
-    ngspice
+    stylua # Lua
+    nodePackages.prettier # Node
   ];
 
   home.sessionPath = [
