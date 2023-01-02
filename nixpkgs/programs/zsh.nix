@@ -26,7 +26,7 @@
       du = "dust";
 
       # Home-manager
-      hms = "home-manager switch";
+      hms = "home-manager switch --flake '~/.config/nixpkgs#aly";
       hme = "cd ~/.config/nixpkgs && hx home.nix";
 
       # Nix
