@@ -24,6 +24,7 @@
       cat = "bat";
       ls = "exa";
       du = "dust";
+      find = "find";
 
       # Home-manager
       hms = "cd ~/.config/nixpkgs && home-manager switch --flake '.#aly'";
