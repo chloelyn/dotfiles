@@ -9,7 +9,7 @@
 {
     "tab_size": 4,
     "hard_tabs": true,
-    "theme": "rosé-pine",
+    "theme": "Rosé Pine",
     "vim_mode": false,
     "buffer_font_size": 15,
     "buffer_font_family": "Cascadia Code",
@@ -46,6 +46,10 @@
                     ]
                 }
             }
+        },
+        "Markdown": {
+            "preferred_line_length": 80,
+            "soft_wrap": "preferred_line_length"
         }
     }
 }

@@ -18,7 +18,6 @@
     exa
     fd
     du-dust
-    cmake
     ripgrep
     neovim
 
