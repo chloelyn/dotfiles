@@ -14,31 +14,14 @@ in
 
   # Packages to install to the user profile
   home.packages = with pkgs; [
-    # Shell
     starship
     direnv
-
-    # Tools
     bat
-
-    # Git
     gh
     git
-
-    # Language support
-    nodejs-18_x
     rust-stable
-    jdk17
-
-    # Node extras
-    nodePackages.pnpm
-    nodePackages.prettier
-    nodePackages.typescript
-
-    # Python extras
     black
 
-    # Wrappers
     (callPackage ./wrappers/helix.nix { })
   ];
 

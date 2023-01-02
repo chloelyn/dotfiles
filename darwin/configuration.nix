@@ -4,7 +4,6 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    # System essentials
     exa
     fd
     du-dust
@@ -12,6 +11,7 @@
     jq
     tldr
     btop
+    jdk17
   ];
 
   # Use a custom configuration.nix location.
