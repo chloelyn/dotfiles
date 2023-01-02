@@ -4,7 +4,7 @@ My [nix-darwin](https://github.com/LnL7/nix-darwin) and [home-manager](https://g
 
 ## Installation
 
-A working installation of both [nix](https://nixos.org/download.html) and [nix-darwin](https://github.com/LnL7/nix-darwin) are required.
+Working installations of [nix](https://nixos.org/download.html) and [nix-darwin](https://github.com/LnL7/nix-darwin) are required.
 
 ```sh
 git clone git@github.com:chloelyn/nix-config.git
