@@ -30,7 +30,6 @@ in
     python310
     rust-stable
     jdk17
-    haskell.compiler.ghc924
 
     # Node extras
     nodePackages.pnpm
