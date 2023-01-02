@@ -52,11 +52,12 @@
 
     # Formatters
     stylua
+
+    # Circuits
+    ngspice
   ];
 
   home.sessionPath = [
-    "/opt/local/bin"
-    "opt/local/sbin"
     "${config.home.homeDirectory}/Library/pnpm"
     "${config.home.homeDirectory}/.cargo/bin"
   ];
