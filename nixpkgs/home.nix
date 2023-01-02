@@ -103,7 +103,7 @@
 
       # Home-manager
       hms = "home-manager switch";
-      hme = "nvim ~/.config/nixpkgs/home.nix";
+      hme = "nix-shell ~/.config/nixpkgs/shell.nix";
 
       # Nix
       ncd = "nix-collect-garbage -d";
