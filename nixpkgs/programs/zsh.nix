@@ -45,12 +45,5 @@
     };
 
     history = { path = "${config.xdg.dataHome}/zsh/zsh_history"; };
-
-    oh-my-zsh = {
-      enable = false;
-      theme = "norm";
-
-      plugins = [ "git" ];
-    };
   };
 }
