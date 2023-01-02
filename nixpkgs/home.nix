@@ -21,12 +21,8 @@
     ripgrep
     neovim
 
-    # Cloud CLIs
-    railway
-    flyctl
-    doppler
-
-    nodePackages.pnpm # Package manager for JS/TS
+    # Package managers
+    nodePackages.pnpm # Node
 
     # Git
     gh
