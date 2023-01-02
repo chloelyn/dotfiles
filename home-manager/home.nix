@@ -23,7 +23,7 @@
     # Language support
     nodejs-18_x
     python310
-    rustup
+    rust-bin.stable.latest.default
     jdk17
     haskell.compiler.ghc924
 
