@@ -27,7 +27,6 @@ in
 
     # Language support
     nodejs-18_x
-    python310
     rust-stable
     jdk17
 
