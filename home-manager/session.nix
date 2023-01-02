@@ -14,7 +14,6 @@
     ZSH_COMPDUMP = "${config.xdg.dataHome}/zsh/zcompdump";
     WAKATIME_HOME = "${config.home.homeDirectory}/.config/wakatime";
     PNPM_HOME = "${config.home.homeDirectory}/Library/pnpm";
-    RUSTUP_HOME = "${config.xdg.dataHome}/rustup";
     CARGO_HOME = "${config.xdg.dataHome}/cargo";
     LESSHISTFILE = "-";
   };
