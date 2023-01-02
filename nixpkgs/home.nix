@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "chloe";
-  home.homeDirectory = "/Users/chloe";
+  home.username = "aly";
+  home.homeDirectory = "/Users/aly";
   xdg.dataHome = "${config.home.homeDirectory}/.local/share";
 
   # Packages that should be installed to the user profile.
@@ -42,7 +42,7 @@
     jdk17 # Java
 
     # Language servers
-    cmake-language-server # CMakeLists.txt
+    # cmake-language-server # CMakeLists.txt (broken)
     nodePackages.dockerfile-language-server-nodejs # Dockerfile
     sumneko-lua-language-server # Lua
     nodePackages.vscode-langservers-extracted # HTML, CSS, Eslint, JSON, Markdown
@@ -74,7 +74,7 @@
   # Git configuration
   programs.git = {
     enable = true;
-    userName = "Chloe Newmark";
+    userName = "Alaina Newmark";
     userEmail = "68250402+chloelyn@users.noreply.github.com";
     signing = {
       key = "37BA3AE5";
