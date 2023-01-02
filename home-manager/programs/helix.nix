@@ -8,6 +8,7 @@
       editor = {
         line-number = "relative";
         cursorline = true;
+        bufferline = "always";
         color-modes = true;
         cursor-shape = {
           insert = "bar";
