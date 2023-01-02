@@ -47,6 +47,16 @@
                 }
             }
         },
+        "Python": {
+            "format_on_save": {
+                "external": {
+                    "command": "black",
+                    "arguments": [
+                        "-"
+                    ]
+                }
+            }
+        },
         "Markdown": {
             "preferred_line_length": 80,
             "soft_wrap": "preferred_line_length"

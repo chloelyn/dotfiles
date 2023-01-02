@@ -29,5 +29,8 @@
     nodePackages.pnpm
     nodePackages.prettier
     nodePackages.typescript
+    
+    # Python extras
+    black
   ];
 }

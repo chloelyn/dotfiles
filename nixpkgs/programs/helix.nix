@@ -19,6 +19,16 @@
         };
       };
     };
+    languages = [
+      {
+        auto-format = true;
+        name = "python";
+        formatter = {
+          command = "black";
+          args = [ "--quiet" "-" ];
+        };
+      }
+    ];
     themes = {
       catppuccin_mocha =
         let
