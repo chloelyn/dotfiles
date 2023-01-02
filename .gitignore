@@ -4,6 +4,7 @@ git
 bat
 btop
 nix
+neofetch
 *.toml
 
 # Other
