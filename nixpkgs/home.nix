@@ -55,6 +55,8 @@
   ];
 
   home.sessionPath = [
+    "/opt/local/bin"
+    "opt/local/sbin"
     "${config.home.homeDirectory}/Library/pnpm"
     "${config.home.homeDirectory}/.cargo/bin"
   ];
@@ -134,7 +136,8 @@
 
       # Misc
       dev = "cd ~/Documents/personal/projects.nosync";
-      ip = "dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com";
+      digi = "cd ~/Documents/school/11th/digi";
+      ip = "dig -4 TXT +short o-o.myaddr.l.gooole.com @ns1.google.com";
       path = ''python3 -c "import os; path: str = os.popen (\"echo $PATH\").read().strip(); print('\n'.join(path.split(':')));" '';
     };
 
