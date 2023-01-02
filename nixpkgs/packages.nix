@@ -12,7 +12,6 @@
     fd
     du-dust
     ripgrep
-    comma
     neofetch
     helix
 
