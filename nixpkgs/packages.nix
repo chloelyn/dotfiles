@@ -15,7 +15,6 @@
     tldr
     btop
     neofetch
-    helix
     direnv
 
     # Git
@@ -35,5 +34,13 @@
 
     # Python extras
     black
+
+    # Wrappers
+    (runCommandNoCC "hx" { nativeBuildInputs = [ makeWrapper ]; } ''
+      mkdir -p $out/bin
+      makeWrapper ${helix}/bin/hx $out/bin/helix \
+        --prefix PATH : ${lib.makeBinPath [ rust-analyzer rnix-lsp python39Packages.python-lsp-server ]}
+    ''
+    )
   ];
 }

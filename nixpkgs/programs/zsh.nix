@@ -29,6 +29,9 @@
       hms = "cd ~/.config/nixpkgs && home-manager switch --flake '.#aly'";
       hme = "cd ~/.config/nixpkgs && hx home.nix";
 
+      # Wrapped helix
+      hx = "helix";
+
       # Nix
       ncd = "nix-collect-garbage -d";
 
