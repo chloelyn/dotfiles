@@ -5,7 +5,6 @@
   home.packages = with pkgs; [
     # Shell
     oh-my-zsh
-    neofetch
 
     # Tools
     bat
@@ -13,6 +12,7 @@
     fd
     du-dust
     ripgrep
+    neofetch
     helix
 
     # Git
@@ -20,16 +20,16 @@
     git
 
     # Language support
-    nodejs-18_x # Node
-    python310 # Python
-    rustup # Rust
-    jdk17 # Java
+    nodejs-18_x
+    python310
+    rustup
+    jdk17
 
     # Node extras
     nodePackages.pnpm
     nodePackages.prettier
     nodePackages.typescript
-    
+
     # Python extras
     black
   ];
