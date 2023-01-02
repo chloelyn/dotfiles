@@ -26,7 +26,7 @@
     python310
     rustup
     jdk17
-    haskell.compiler.ghc943
+    haskell.compiler.ghc924
 
     # Node extras
     nodePackages.pnpm
