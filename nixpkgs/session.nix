@@ -10,7 +10,7 @@
   home.sessionVariables = {
     NIX_PATH =
       "${config.home.homeDirectory}/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels";
-    EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/hx";
+    EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/helix-wrapped";
     ZSH_COMPDUMP = "${config.xdg.dataHome}/zsh/zcompdump";
     WAKATIME_HOME = "${config.home.homeDirectory}/.config/wakatime";
     PNPM_HOME = "${config.home.homeDirectory}/Library/pnpm";
