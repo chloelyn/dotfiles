@@ -24,15 +24,13 @@
       du = "dust";
       find = "find";
 
-      # Home-manager
-      hms = "cd ~/.config/nixpkgs && home-manager switch --flake '.#aly'";
-      hme = "cd ~/.config/nixpkgs && hx home.nix";
+      # Nix
+      nix-switch = "darwin-rebuild switch --flake ~/.config/nixpkgs";
+      nix-edit = "cd ~/.config/nixpkgs && hx .";
+      nix-clean = "nix-collect-garbage -d";
 
       # Wrapped helix
       hx = "helix-wrapped";
-
-      # Nix
-      ncd = "nix-collect-garbage -d";
 
       # Tailscale
       tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";

@@ -18,6 +18,8 @@
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
   environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
 
+  security.pam.enableSudoTouchIdAuth = true;
+
   # https://github.com/LnL7/nix-darwin/issues/423
   users.users.aly = {
     name = "aly";
