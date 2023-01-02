@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 
+let
+  rust-stable = pkgs.rust-bin.stable.latest.default.override {
+    extensions = [ "rust-src" ];
+  };
+in
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -23,7 +28,7 @@
     # Language support
     nodejs-18_x
     python310
-    rust-bin.stable.latest.default
+    rust-stable
     jdk17
     haskell.compiler.ghc924
 
