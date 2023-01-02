@@ -1,6 +1,4 @@
 {
-  description = "Alaina's macOS configuration!";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     darwin = {
