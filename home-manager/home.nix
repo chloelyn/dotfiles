@@ -20,7 +20,10 @@ in
     gh
     git
     rust-stable
+
+    # Personal projects
     etherea
+    athena
 
     (callPackage ./wrappers/helix.nix { })
   ];
