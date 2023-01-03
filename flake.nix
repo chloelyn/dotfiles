@@ -10,9 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay.url = "github:oxalica/rust-overlay";
+    personal.url = "github:alaidriel/nix-overlay";
   };
 
-  outputs = { self, nixpkgs, home-manager, darwin, rust-overlay, ... }: {
+  outputs = { self, nixpkgs, home-manager, darwin, rust-overlay, personal, ... }: {
     darwinConfigurations.europa = darwin.lib.darwinSystem
       {
         system = "x86_64-darwin";
@@ -21,6 +22,7 @@
           ({
             nixpkgs.overlays = [
               rust-overlay.overlays.default
+              personal.overlay
             ];
           })
 

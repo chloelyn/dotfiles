@@ -20,6 +20,7 @@ in
     gh
     git
     rust-stable
+    etherea
 
     (callPackage ./wrappers/helix.nix { })
   ];
