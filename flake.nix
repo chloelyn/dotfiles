@@ -22,7 +22,7 @@
           ({
             nixpkgs.overlays = [
               rust-overlay.overlays.default
-              personal.overlay
+              personal.overlays.default
             ];
           })
 
