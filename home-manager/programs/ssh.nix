@@ -4,6 +4,8 @@
   # SSH configuration
   programs.ssh = {
     enable = true;
+    controlPath = "${config.xdg.dataHome}/ssh/master-%r@%n:%p";
+    userKnownHostsFile = "${config.xdg.dataHome}/ssh/known_hosts";
     matchBlocks = {
       "github.com" = {
         extraOptions = {
