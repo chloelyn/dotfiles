@@ -2,7 +2,7 @@
 {
   programs.git = {
     enable = true;
-    userName = "Alaina Newmark";
+    userName = "Alaina";
     userEmail = "68250402+alaidriel@users.noreply.github.com";
     signing = {
       key = "37BA3AE5";

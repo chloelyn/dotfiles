@@ -35,9 +35,7 @@
       # Tailscale
       tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
 
-      # Misc
-      dev = "cd ~/Documents/personal/projects.nosync";
-      digi = "cd ~/Documents/school/11th/digi";
+      # Shortcuts
       ip = "dig -4 TXT +short o-o.myaddr.l.gooole.com @ns1.google.com";
       path = ''python3 -c "import os; path: str = os.popen (\"echo $PATH\").read().strip(); print('\n'.join(path.split(':')));" '';
     };

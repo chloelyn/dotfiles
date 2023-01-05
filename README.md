@@ -7,7 +7,7 @@ My [nix-darwin](https://github.com/LnL7/nix-darwin) and [home-manager](https://g
 Working installations of [nix](https://nixos.org/download.html) and [nix-darwin](https://github.com/LnL7/nix-darwin) are required.
 
 ```sh
-git clone git@github.com:chloelyn/nix-config.git
+git clone git@github.com:alaidriel/nix-config.git
 mv nix-config ~/.config/nixpkgs
 darwin-rebuild switch --flake ~/.config/nixpkgs
 ```
