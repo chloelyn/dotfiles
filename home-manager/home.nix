@@ -20,6 +20,7 @@ in
     gh
     git
     rust-stable
+    gnupg
 
     # Personal projects
     etherea
@@ -35,6 +36,7 @@ in
     ./programs/starship.nix
     ./programs/direnv.nix
     ./programs/git.nix
+    ./programs/gpg.nix
     ./programs/ssh.nix
     ./programs/helix.nix
     ./programs/bat.nix

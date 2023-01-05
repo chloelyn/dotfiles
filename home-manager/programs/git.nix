@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 # Git configuration
 {
   programs.git = {
@@ -5,9 +7,9 @@
     userName = "Alaina";
     userEmail = "68250402+alaidriel@users.noreply.github.com";
     signing = {
-      key = "37BA3AE5";
+      key = "18F71B0A";
       signByDefault = true;
-      gpgPath = "/usr/local/bin/gpg";
+      gpgPath = "${pkgs.gnupg}/bin/gpg2";
     };
     ignores = [ ".DS_Store" ];
     extraConfig = {
