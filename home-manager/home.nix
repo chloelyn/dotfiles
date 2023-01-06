@@ -21,6 +21,7 @@ in
     git
     rust-stable
     gnupg
+    zig-custom
 
     # Personal projects
     etherea
