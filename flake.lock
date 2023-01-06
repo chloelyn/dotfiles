@@ -125,11 +125,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1673027238,
-        "narHash": "sha256-yWU69CMZs4xv2U6Q92ezYQVetV+uzIiI+OwT5QXzpKs=",
+        "lastModified": 1673028368,
+        "narHash": "sha256-FgHWwpfgTcejMLzrPNe1Qhsbvo+ve09r71UhTula7Go=",
         "owner": "alaidriel",
         "repo": "nix-packages",
-        "rev": "82296d0a6857d7b0ccd90344c2487a542d21d62b",
+        "rev": "0ae9d4425add4cc78f55a41b4921128c3f5bbfa1",
         "type": "github"
       },
       "original": {
