@@ -10,7 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay.url = "github:oxalica/rust-overlay";
-    personal.url = "github:alaidriel/nix-overlay";
+    personal.url = "github:alaidriel/nix-packages";
   };
 
   outputs = { self, nixpkgs, home-manager, darwin, rust-overlay, personal, ... }: {
