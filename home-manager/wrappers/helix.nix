@@ -9,6 +9,7 @@
 , nixpkgs-fmt
 , python39Packages
 , black
+, zls
 , ...
 }:
 
@@ -24,5 +25,6 @@ runCommandNoCC "helix-wrapped"
       python39Packages.python-lsp-server
       black
       nixpkgs-fmt
+      zls
   ]}
 ''
