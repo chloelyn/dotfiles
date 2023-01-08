@@ -13,12 +13,12 @@
 , ...
 }:
 
-runCommandNoCC "helix-wrapped"
+runCommandNoCC "hx"
 {
   nativeBuildInputs = [ makeWrapper ];
 } ''
   mkdir -p $out/bin
-  makeWrapper ${helix}/bin/hx $out/bin/helix-wrapped \
+  makeWrapper ${helix}/bin/hx $out/bin/hx \
     --prefix PATH : ${lib.makeBinPath [
       rust-analyzer
       nil

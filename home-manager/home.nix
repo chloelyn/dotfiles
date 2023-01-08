@@ -38,7 +38,6 @@ in
     ./programs/git.nix
     ./programs/gpg.nix
     ./programs/ssh.nix
-    ./programs/helix.nix
     ./programs/bat.nix
 
     ./dedicated

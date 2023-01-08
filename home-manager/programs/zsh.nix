@@ -29,9 +29,6 @@
       nix-edit = "cd ~/.config/nixpkgs && hx .";
       nix-clean = "nix-collect-garbage -d";
 
-      # Wrapped helix
-      hx = "helix-wrapped";
-
       # Tailscale
       tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
 
