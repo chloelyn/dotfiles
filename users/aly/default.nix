@@ -1,11 +1,12 @@
-{ config, pkgs, ... }:
-
-let
-  rust-stable = pkgs.rust-bin.stable.latest.default.override {
-    extensions = [ "rust-src" ];
-  };
-in
 {
+  config,
+  pkgs,
+  ...
+}: let
+  rust-stable = pkgs.rust-bin.stable.latest.default.override {
+    extensions = ["rust-src"];
+  };
+in {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "aly";
@@ -26,7 +27,7 @@ in
     etherea
     athena
 
-    (callPackage ./wrappers/helix.nix { })
+    (callPackage ./wrappers/helix.nix {})
   ];
 
   # Modularized configuration files

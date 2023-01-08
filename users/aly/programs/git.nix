@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # Git configuration
 {
   programs.git = {
@@ -11,7 +10,7 @@
       signByDefault = true;
       gpgPath = "${pkgs.gnupg}/bin/gpg2";
     };
-    ignores = [ ".DS_Store" ];
+    ignores = [".DS_Store"];
     extraConfig = {
       init = {
         defaultBranch = "main";

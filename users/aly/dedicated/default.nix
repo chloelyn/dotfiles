@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   config.home.file = {
-    ".config/btop" = { source = ./btop; };
-    ".config/neofetch" = { source = ./neofetch; };
-    ".config/helix" = { source = ./helix; };
+    ".config/btop" = {source = ./btop;};
+    ".config/neofetch" = {source = ./neofetch;};
+    ".config/helix" = {source = ./helix;};
     "Library/Application Support/zls.json" = {
       text = ''
         {

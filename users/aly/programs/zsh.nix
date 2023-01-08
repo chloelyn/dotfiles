@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Zsh configuration
   programs.zsh = {
     enable = true;
@@ -37,6 +39,6 @@
       path = ''python3 -c "import os; path: str = os.popen (\"echo $PATH\").read().strip(); print('\n'.join(path.split(':')));" '';
     };
 
-    history = { path = "${config.xdg.dataHome}/zsh/zsh_history"; };
+    history = {path = "${config.xdg.dataHome}/zsh/zsh_history";};
   };
 }

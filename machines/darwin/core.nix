@@ -1,24 +1,4 @@
-{ config, pkgs, ... }:
-
-{
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
-    exa
-    fd
-    du-dust
-    ripgrep
-    jq
-    tldr
-    btop
-    jdk17
-  ];
-
-  environment.loginShell = "${pkgs.zsh}/bin/zsh -l";
-  environment.shells = with pkgs; [
-    zsh
-  ];
-
+{pkgs, ...}: {
   security.pam.enableSudoTouchIdAuth = true;
 
   # https://github.com/LnL7/nix-darwin/issues/423
