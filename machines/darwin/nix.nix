@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   services.nix-daemon.enable = true;
 
   nix.package = pkgs.nix;
@@ -6,4 +10,9 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
+  nixpkgs.overlays = with inputs; [
+    rust-overlay.overlays.default
+    personal.overlays.default
+  ];
 }

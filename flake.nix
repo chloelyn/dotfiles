@@ -13,7 +13,7 @@
     personal.url = "github:alaidriel/nix-packages";
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
@@ -21,31 +21,32 @@
     rust-overlay,
     personal,
     ...
-  }: let
-    overlays = {
-      nixpkgs.overlays = [
-        rust-overlay.overlays.default
-        personal.overlays.default
-      ];
-    };
-  in {
-    darwinConfigurations.europa = darwin.lib.darwinSystem {
+  }: {
+    darwinConfigurations.europa = let
       system = "x86_64-darwin";
+      pkgs = import nixpkgs {inherit system;};
+    in let
+      sys-config = import ./machines/darwin {
+        inherit (pkgs) lib;
+        inherit inputs;
+        inherit pkgs;
+      };
+    in
+      darwin.lib.darwinSystem {
+        inherit system;
 
-      modules = [
-        overlays
+        modules = [
+          sys-config
 
-        ./machines/darwin
-
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users = {
-            aly = import ./users/aly;
-          };
-        }
-      ];
-    };
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users = {
+              aly = import ./users/aly;
+            };
+          }
+        ];
+      };
   };
 }
