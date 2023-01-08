@@ -27,9 +27,9 @@
       find = "find";
 
       # Nix
-      nix-switch = "darwin-rebuild switch --flake ~/.config/nixpkgs";
-      nix-edit = "cd ~/.config/nixpkgs && hx .";
-      nix-clean = "nix-collect-garbage -d";
+      nix-switch = "darwin-rebuild switch --flake ~/Nix";
+      nix-edit = "cd ~/Nix && hx .";
+      nix-clean = "sudo nix-collect-garbage -d";
 
       # Tailscale
       tailscale = "/Applications/Tailscale.app/Contents/MacOS/Tailscale";
