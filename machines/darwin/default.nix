@@ -8,6 +8,7 @@
 in
   merge (imported [
     ./core.nix
+    ./nix.nix
     ./system-defaults.nix
     ./env.nix
   ])
