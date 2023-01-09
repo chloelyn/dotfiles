@@ -1,50 +1,19 @@
 {
   config,
-  pkgs,
+  lib,
   ...
-}: let
-  rust-stable = pkgs.rust-bin.stable.latest.default.override {
-    extensions = ["rust-src"];
-  };
-in {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
+}: {
   home.username = "aly";
   home.homeDirectory = "/Users/aly";
   xdg.dataHome = "${config.home.homeDirectory}/.local/share";
 
-  # Packages to install to the user profile
-  home.packages = with pkgs; [
-    starship
-    direnv
-    bat
-    gh
-    git
-    rust-stable
-    gnupg
-
-    # Personal projects
-    etherea
-    athena
-
-    (callPackage ./wrappers/helix.nix {})
-  ];
-
-  # Modularized configuration files
-  imports = [
-    ./programs/zsh.nix
-    ./programs/bash.nix
-    ./programs/starship.nix
-    ./programs/direnv.nix
-    ./programs/git.nix
-    ./programs/gpg.nix
-    ./programs/ssh.nix
-    ./programs/bat.nix
-
-    ./dedicated
-
-    ./session.nix
-  ];
+  imports =
+    lib.filesystem.listFilesRecursive ./programs
+    ++ [
+      ./packages.nix
+      ./session.nix
+      ./dedicated
+    ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
