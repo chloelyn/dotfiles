@@ -5,6 +5,7 @@
 in {
   home.packages = with pkgs; [
     rust-stable
+    ranger
     gh
 
     # Personal projects
