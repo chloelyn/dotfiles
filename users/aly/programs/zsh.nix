@@ -22,7 +22,6 @@
     shellAliases = {
       # https://github.com/ibraheemdev/modern-unix
       cat = "bat";
-      ls = "exa";
       du = "dust";
       find = "find";
 
